@@ -45,7 +45,7 @@ export const calculateExercises = (data: exerciseRequest): exerciseData => {
     const average = daily_exercises.reduce((a, b) => a + b, 0)/periodLength;
     const success = average >= target;
     const rating = success ? 3 : parseFloat(((average/target)*2 + 1).toFixed(2));
-    let ratingDescription;
+    let ratingDescription: string;
     if (success) {
         ratingDescription = 'Good Job! You reached your goal!';
     } else if (rating >= 2.8) {

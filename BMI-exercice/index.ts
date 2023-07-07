@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 
 app.get('/hello', (_req, res) => {
-    res.send('Hello Full Stack!')
+    res.send('Hello Full Stack!');
 });
 
 interface bmiData {
@@ -43,7 +43,7 @@ app.post('/exercises', (req, res) => {
     }
 });
 
-const PORT: number = 3002;
+const PORT = 3002;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
